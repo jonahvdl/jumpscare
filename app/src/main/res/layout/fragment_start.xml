@@ -15,7 +15,7 @@ bh
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#555555"
+        android:backgroundTint="#404040"
         android:text="search a movie...                     "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
