@@ -25,7 +25,7 @@
         android:layout_height="72dp"
         android:background="#5b5b5b"
         android:iconifiedByDefault="false"
-        android:queryHint="Search a movie here..."
+        android:queryHint="Search a movie..."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
