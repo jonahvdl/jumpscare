@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,32 +40,14 @@ class search : Fragment() {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
         view.findViewById<Button>(R.id.button)
             .setOnClickListener {
+                val bundle = bundleOf("movie" to "fnaf")
+
+
                 Navigation
                     .findNavController(view)
-                    .navigate(
-                        R.id.action_search_to_movie
-                    )
+                    .navigate(R.id.action_search_to_movie, bundle)
             }
         return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment search.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            search().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
