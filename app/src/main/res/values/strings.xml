@@ -2,4 +2,28 @@
     <string name="app_name">Jumpscare alert app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="movies">
+        <item>Five Nights at Freddy´s</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>Scream</item>
+        <item>The Blair Witch Project</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>IT</item>
+        <item>IT 2</item>
+        <item>IT</item>
+        <item>IT 2</item>
+
+
+
+    </string-array>
+
 </resources>
