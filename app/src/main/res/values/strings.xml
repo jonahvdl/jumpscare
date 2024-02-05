@@ -4,28 +4,29 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="movies">
-        <item>Five Nights at Freddy´s</item>
-        <item>IT</item>
-        <item>Don\'t Breathe</item>
-        <item>Don\'t Breathe 2 </item>
-        <item>Scream</item>
-        <item>The Blair Witch Project</item>
         <item>Alien</item>
-        <item>Jaws</item>
-        <item>Get out</item>
+        <item>Annabelle</item>
         <item>A quiet place</item>
         <item>A quiet place part II</item>
-        <item>Halloween</item>
-        <item>The Conjuring</item>
+        <item>Don\'t Breathe</item>
+        <item>Don\'t Breathe 2 </item>
+        <item>Five Nights at Freddy´s</item>
+        <item>Freddy vs. Jason </item>
         <item>Friday the 13th (Marcus Nispel ed.)</item>
         <item>Friday the 13th (Sean S. Cunningham ed.)</item>
         <item>Friday the 13th part 2 (Steve Miner ed.)</item>
         <item>Friday the 13th part III (Steve Miner ed.)</item>
-        <item>The Ring</item>
-        <item>Annabelle</item>
+        <item>Get out</item>
+        <item>Halloween</item>
+        <item>IT</item>
         <item>It follows</item>
+        <item>Jaws</item>
+        <item>Scream</item>
+        <item>The Blair Witch Project</item>
+        <item>The Conjuring</item>
         <item>The Exorcist</item>
-        <item>Freddy vs. Jason </item>
+        <item>The Ring</item>
+
 
 
 
