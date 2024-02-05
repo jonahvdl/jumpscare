@@ -1,5 +1,6 @@
 package com.jumpscarealertapp
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,6 +24,8 @@ class movie : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    var is_playing = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,11 +42,18 @@ class movie : Fragment() {
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
         view.findViewById<Button>(R.id.start_btn)
             .setOnClickListener {
-                Navigation
-                    .findNavController(view)
-                    .navigate(
-                        R.id.action_movie_to_movie2
-                    )
+                if (is_playing) {
+                    view.findViewById<Button>(R.id.start_btn).text =
+                        "Start"
+                    view.findViewById<Button>(R.id.start_btn).setBackgroundColor(Color.parseColor("#8BC34A"))
+                    is_playing = !is_playing
+                } else {
+                    view.findViewById<Button>(R.id.start_btn).text =
+                        "Stop"
+                    view.findViewById<Button>(R.id.start_btn).setBackgroundColor(Color.RED)
+                    is_playing = !is_playing
+
+                }
             }
         return view
     }
