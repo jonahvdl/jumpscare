@@ -9,7 +9,7 @@
     tools:context=".movie">
 
     <TextView
-        android:id="@+id/fnaf_text"
+        android:id="@+id/movie_text"
         android:layout_width="0dp"
         android:layout_height="111dp"
         android:scaleX="1"
@@ -18,7 +18,7 @@
         android:shadowDx="-1"
         android:shadowDy="-4"
         android:shadowRadius="5"
-        android:text="Five Nights at Freddy´s"
+        android:text="IT"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#FFFFFF"
