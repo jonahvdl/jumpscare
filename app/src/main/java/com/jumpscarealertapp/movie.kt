@@ -1,5 +1,6 @@
 package com.jumpscarealertapp
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,6 +30,7 @@ class movie : Fragment() {
     private var param2: String? = null
 
     var is_playing = false
+    var times = listOf<Int>(50, 60, 70)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,12 +68,28 @@ class movie : Fragment() {
         val mainHandler = Handler(Looper.getMainLooper())
 
         mainHandler.post(object : Runnable {
+            @SuppressLint("CutPasteId")
             override fun run() {
                 mainHandler.postDelayed(this, 1000)
                 if (is_playing) {
                     view.findViewById<ProgressBar>(R.id.progressBar).progress =
                         view.findViewById<ProgressBar>(R.id.progressBar).progress + 1
                     println(view.findViewById<ProgressBar>(R.id.progressBar).progress)
+                    var nearestTime = 0
+                    var nearestTimeDeltaT = 0
+                    for (time in times) {
+                        println(time)
+                        val delta_t = time - view.findViewById<ProgressBar>(R.id.progressBar).progress
+                        if (delta_t < 0){
+                            break
+                        }
+                        if (delta_t > nearestTimeDeltaT) {
+                            nearestTime = time
+                            nearestTimeDeltaT = delta_t
+                        }
+                    }
+                    view.findViewById<TextView>(R.id.countdown).text = "in $nearestTimeDeltaT seconds"
+                //view.findViewById<TextView>(R.id.countdown).text =
                 }
             }
         })
