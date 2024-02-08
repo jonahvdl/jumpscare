@@ -37,7 +37,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:indeterminate="false"
-        android:max="100"
+        android:max="8100"
+        android:min="0"
+        android:progress="25"
         android:progressBackgroundTint="#FFFFFF"
         android:progressBackgroundTintMode="screen"
         android:progressTint="#FF1717"
@@ -58,5 +60,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="InvalidId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

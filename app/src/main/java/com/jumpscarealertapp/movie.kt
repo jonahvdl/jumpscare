@@ -2,11 +2,14 @@ package com.jumpscarealertapp
 
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -55,8 +58,26 @@ class movie : Fragment() {
 
                 }
             }
+        view.findViewById<Button>(R.id.reset_btn)
+            .setOnClickListener {
+                view.findViewById<ProgressBar>(R.id.progressBar).progress = 0
+            }
+        val mainHandler = Handler(Looper.getMainLooper())
+
+        mainHandler.post(object : Runnable {
+            override fun run() {
+                mainHandler.postDelayed(this, 1000)
+                if (is_playing) {
+                    view.findViewById<ProgressBar>(R.id.progressBar).progress =
+                        view.findViewById<ProgressBar>(R.id.progressBar).progress + 1
+                    println(view.findViewById<ProgressBar>(R.id.progressBar).progress)
+                }
+            }
+        })
+
         return view
     }
+
 
     companion object {
         /**
