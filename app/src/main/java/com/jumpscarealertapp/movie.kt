@@ -30,7 +30,7 @@ class movie : Fragment() {
     private var param2: String? = null
 
     var is_playing = false
-    var times = listOf(5, 9, 20)
+    var times = listOf(5, 9, 20, 999)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
