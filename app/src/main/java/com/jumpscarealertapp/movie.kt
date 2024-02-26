@@ -30,7 +30,7 @@ class movie : Fragment() {
     private var param2: String? = null
 
     var is_playing = false
-    var times = listOf(500)
+    var times = listOf(5, 9, 20)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,19 +77,26 @@ class movie : Fragment() {
                 if (is_playing) {
                     view.findViewById<ProgressBar>(R.id.progressBar).progress =
                         view.findViewById<ProgressBar>(R.id.progressBar).progress + 1
-                    println(view.findViewById<ProgressBar>(R.id.progressBar).progress)
-                    var nearestTime = 0
-                    var nearestTimeDeltaT = 0
+                    var nearestTime = Int.MAX_VALUE
+                    var nearestTimeDeltaT = Int.MAX_VALUE
                     for (time in times) {
-                        println(time)
+                        println(view.findViewById<ProgressBar>(R.id.progressBar).progress.toString())
                         val delta_t = time - view.findViewById<ProgressBar>(R.id.progressBar).progress
-                        if (delta_t < 0){
-                            break
+                        println("$time $delta_t")
+                        if (delta_t <= 0) {
+                            continue
                         }
-                        if (delta_t > nearestTimeDeltaT) {
+                        if (delta_t < nearestTimeDeltaT){
                             nearestTime = time
                             nearestTimeDeltaT = delta_t
                         }
+
+
+                        /*
+                        if ((delta_t < nearestTimeDeltaT) and (delta_t > time)) {
+                            nearestTime = time
+                            nearestTimeDeltaT = delta_t
+                        }*/
                     }
                     view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in $nearestTimeDeltaT seconds"
                 //view.findViewById<TextView>(R.id.countdown).text =
