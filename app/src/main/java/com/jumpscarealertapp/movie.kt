@@ -30,7 +30,7 @@ class movie : Fragment() {
     private var param2: String? = null
 
     var is_playing = false
-    var times = listOf<Int>(50, 60, 70)
+    var times = listOf(500)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +39,8 @@ class movie : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -88,7 +90,7 @@ class movie : Fragment() {
                             nearestTimeDeltaT = delta_t
                         }
                     }
-                    view.findViewById<TextView>(R.id.countdown).text = "in $nearestTimeDeltaT seconds"
+                    view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in $nearestTimeDeltaT seconds"
                 //view.findViewById<TextView>(R.id.countdown).text =
                 }
             }

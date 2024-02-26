@@ -58,29 +58,37 @@
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/reset_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/start_btn"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="InvalidId" />
 
     <TextView
         android:id="@+id/countdown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In 0 seconds"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_width="325dp"
+        android:layout_height="36dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="next jumpscare in 0 seconds"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.339" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
