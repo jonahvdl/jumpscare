@@ -78,17 +78,15 @@
 
     <TextView
         android:id="@+id/countdown"
-        android:layout_width="325dp"
-        android:layout_height="36dp"
-        android:scaleX="1"
-        android:scaleY="1"
+        android:layout_width="337dp"
+        android:layout_height="48dp"
         android:text="next jumpscare in 0 seconds"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.315" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

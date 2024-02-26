@@ -48,6 +48,7 @@ class movie : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
+        view.findViewById<ProgressBar>(R.id.progressBar).progress = 0
         view.findViewById<Button>(R.id.start_btn)
             .setOnClickListener {
                 if (is_playing) {
