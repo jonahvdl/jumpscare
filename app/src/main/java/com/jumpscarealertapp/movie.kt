@@ -73,7 +73,7 @@ class movie : Fragment() {
         mainHandler.post(object : Runnable {
             @SuppressLint("CutPasteId")
             override fun run() {
-                mainHandler.postDelayed(this, 1000)
+                mainHandler.postDelayed(this, 0)
                 if (is_playing) {
                     view.findViewById<ProgressBar>(R.id.progressBar).progress =
                         view.findViewById<ProgressBar>(R.id.progressBar).progress + 1
@@ -90,13 +90,6 @@ class movie : Fragment() {
                             nearestTime = time
                             nearestTimeDeltaT = delta_t
                         }
-
-
-                        /*
-                        if ((delta_t < nearestTimeDeltaT) and (delta_t > time)) {
-                            nearestTime = time
-                            nearestTimeDeltaT = delta_t
-                        }*/
                     }
                     view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in $nearestTimeDeltaT seconds"
                 //view.findViewById<TextView>(R.id.countdown).text =

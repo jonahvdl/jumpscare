@@ -80,6 +80,7 @@
         android:id="@+id/countdown"
         android:layout_width="337dp"
         android:layout_height="48dp"
+        android:textColor="#FFFFFF"
         android:text="next jumpscare in 0 seconds"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
