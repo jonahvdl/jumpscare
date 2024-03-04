@@ -35,12 +35,15 @@ class start : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_start, container, false)
-
-        view.findViewById<Button>(R.id.button4).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_start2_to_search)
-        }
+        view.findViewById<Button>(R.id.button)
+            .setOnClickListener {
+                Navigation
+                    .findNavController(view)
+                    .navigate(
+                        R.id.action_start2_to_movie
+                    )
+            }
         return view
     }
 }

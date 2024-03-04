@@ -11,34 +11,17 @@
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
-            android:id="@+id/action_start2_to_search"
-            app:destination="@id/search" />
+            android:id="@+id/action_start2_to_movie"
+            app:destination="@id/movie" />
     </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.jumpscarealertapp.search"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
-        <action
-            android:id="@+id/action_search_to_movie"
-            app:destination="@id/movie" />
-    </fragment>
+        tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/movie"
         android:name="com.jumpscarealertapp.movie"
         android:label="fragment_movie"
-        tools:layout="@layout/fragment_movie" >
-        <action
-            android:id="@+id/action_movie_to_movie2"
-            app:destination="@id/movie2" />
-    </fragment>
-    <fragment
-        android:id="@+id/movie2"
-        android:name="com.jumpscarealertapp.movie2"
-        android:label="fragment_movie2"
-        tools:layout="@layout/fragment_movie2" >
-        <action
-            android:id="@+id/action_movie2_to_movie"
-            app:destination="@id/movie" />
-    </fragment>
+        tools:layout="@layout/fragment_movie" />
 </navigation>

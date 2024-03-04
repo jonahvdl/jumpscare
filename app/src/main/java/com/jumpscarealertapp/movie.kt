@@ -73,7 +73,7 @@ class movie : Fragment() {
         mainHandler.post(object : Runnable {
             @SuppressLint("CutPasteId")
             override fun run() {
-                mainHandler.postDelayed(this, 0)
+                mainHandler.postDelayed(this, 1000)
                 if (is_playing) {
                     view.findViewById<ProgressBar>(R.id.progressBar).progress =
                         view.findViewById<ProgressBar>(R.id.progressBar).progress + 1
