@@ -49,6 +49,7 @@ class movie : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
         view.findViewById<ProgressBar>(R.id.progressBar).progress = 0
+        view.findViewById<TextView>(R.id.countdown).text = "first jumpscare in 365 seconds"
         view.findViewById<Button>(R.id.start_btn)
             .setOnClickListener {
                 if (is_playing) {
@@ -67,6 +68,7 @@ class movie : Fragment() {
         view.findViewById<Button>(R.id.reset_btn)
             .setOnClickListener {
                 view.findViewById<ProgressBar>(R.id.progressBar).progress = 0
+                view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in 365 seconds"
             }
         val mainHandler = Handler(Looper.getMainLooper())
 
@@ -92,6 +94,9 @@ class movie : Fragment() {
                         }
                     }
                     view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in $nearestTimeDeltaT seconds"
+                    if (nearestTimeDeltaT == Int.MAX_VALUE) {
+                        view.findViewById<TextView>(R.id.countdown).text = "         no more jumpscares"
+                    }
                 //view.findViewById<TextView>(R.id.countdown).text =
                 }
             }
