@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5B5B5B"
+    android:background="#FF5A5A64"
     tools:context=".movie">
 
     <TextView
@@ -80,9 +80,9 @@
         android:id="@+id/countdown"
         android:layout_width="337dp"
         android:layout_height="48dp"
-        android:textColor="#FFFFFF"
         android:text="next jumpscare in 0 seconds"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.783"
