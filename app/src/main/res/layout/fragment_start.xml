@@ -28,7 +28,7 @@
         style="@style/SpinnerStyle"
         android:layout_width="0dp"
         android:layout_height="61dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#000000"
         android:entries="@array/movies"
         android:foregroundTint="#FFFFFF"
         android:foregroundTintMode="multiply"

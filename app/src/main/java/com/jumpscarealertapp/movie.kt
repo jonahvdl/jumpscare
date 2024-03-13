@@ -37,8 +37,6 @@ class movie : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -90,7 +88,7 @@ class movie : Fragment() {
                         if (delta_t < nearestTimeDeltaT){
                             nearestTime = time
                             nearestTimeDeltaT = delta_t
-                        }
+                       }
                     }
                     view.findViewById<TextView>(R.id.countdown).text = "next jumpscare in $nearestTimeDeltaT seconds"
                     if (nearestTimeDeltaT == Int.MAX_VALUE) {
