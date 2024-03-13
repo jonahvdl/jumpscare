@@ -12,16 +12,23 @@
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_start2_to_movie"
-            app:destination="@id/movie" />
+            app:destination="@id/movie" >
+            <argument
+                android:name="FilmName"
+                android:defaultValue="doei" />
+            <argument
+                android:name="film"
+                android:defaultValue="doei" />
+        </action>
     </fragment>
-    <fragment
-        android:id="@+id/search"
-        android:name="com.jumpscarealertapp.search"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/movie"
         android:name="com.jumpscarealertapp.movie"
         android:label="fragment_movie"
-        tools:layout="@layout/fragment_movie" />
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="film"
+            app:argType="string"
+            android:defaultValue="hoi" />
+    </fragment>
 </navigation>

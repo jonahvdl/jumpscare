@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Spinner
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -15,9 +17,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [start.newInstance] factory method to
+ * Use the [movie.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class start : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -41,8 +44,13 @@ class start : Fragment() {
                 Navigation
                     .findNavController(view)
                     .navigate(
-                        R.id.action_start2_to_movie
+                        R.id.action_start2_to_movie,
+                        bundleOf(
+                            Pair("film",
+                        view.findViewById<Spinner>(R.id.spinner).selectedItem.toString())
+                        )
                     )
+
             }
         return view
     }

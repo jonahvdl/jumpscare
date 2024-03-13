@@ -33,11 +33,8 @@ class movie : Fragment() {
     var times = listOf(365, 1174, 1221, 1375, 1693, 1725, 2108, 2146, 3214, 3454, 3559, 4431, 4750, 4896, 4963, 5077, 5890, 6343, 6529, 6585, 6748, 6992)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        println(savedInstanceState.toString())
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
 
@@ -48,6 +45,8 @@ class movie : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
+        view.findViewById<TextView>(R.id.movie_text).text = arguments?.getString("film").toString()
+
         view.findViewById<ProgressBar>(R.id.progressBar).progress = 0
         view.findViewById<TextView>(R.id.countdown).text = "first jumpscare in 365 seconds"
         view.findViewById<Button>(R.id.start_btn)
@@ -97,7 +96,6 @@ class movie : Fragment() {
                     if (nearestTimeDeltaT == Int.MAX_VALUE) {
                         view.findViewById<TextView>(R.id.countdown).text = "         no more jumpscares"
                     }
-                //view.findViewById<TextView>(R.id.countdown).text =
                 }
             }
         })
